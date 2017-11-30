@@ -32,8 +32,9 @@ export class MallPageComponent implements OnInit {
   ngOnInit() {
     this.mallId = this.route.snapshot.paramMap.get('mall_id');
     this.mall = {
-      name: 'xxmall',
+      name: 'Xmall',
       id: this.mallId,
+      description: 'This is a small small mall.',
     };
     this.getLevels();
   }

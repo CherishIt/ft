@@ -1,5 +1,12 @@
 <div>
-  <div class="mall-title">{{ mall.name }}({{ mall.id }})</div>
+  <div class="mall-header">
+    <div class="mall-title">
+      {{ mall.name }}
+    </div>
+    <div class="mall-desc">
+      {{ mall.description }}
+    </div>
+  </div>
   <section class="level-list">
     <div *ngFor="let level of levels" class="level-list-item">
       <app-level-card [level]="level" ></app-level-card>

@@ -1,8 +1,21 @@
+.mall-header {
+    height: 120px;
+    background: url('/assets/images/default-img.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+
 .mall-title {
     font-size: 22px;
     font-weight: 600;
-    padding: 10px;
-    color: #36475A;
+    padding: 10px 15px;
+    color: white;
+    flex: 1;
+}
+
+.mall-desc {
+    padding: 0 15px;
+    font-size: 16px;
+    color: white;
 }
 
 .level-list {
