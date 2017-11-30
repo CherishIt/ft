@@ -24,10 +24,12 @@ export class LevelPageComponent implements OnInit {
   getToilets() {
     this.levelService.getToilets(this.mallId, this.levelId)
       .subscribe(
-        data => this.toilets = data.sort((a, b) =>
-          (a.position.male.available + a.position.female.available) -
-          (b.position.male.available + a.position.female.available),
-        ),
+        data => {
+          this.toilets = data.sort((a, b) =>
+            (b.position.male.available + b.position.female.available) -
+            (a.position.male.available + a.position.female.available),
+          );
+        },
         err => console.log(err),
       );
   }
