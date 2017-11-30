@@ -1,0 +1,8 @@
+<div class="level-page">
+  <div class="level-page-header font-header">{{ levelId }}</div>
+  <div class="toilet-list">
+    <div *ngFor="let toilet of toilets" class="toilet-list-item">
+      <app-toilet-card [toilet]="toilet"></app-toilet-card>
+    </div>
+  </div>
+</div>

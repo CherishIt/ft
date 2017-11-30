@@ -1,0 +1,8 @@
+<div>
+  <div class="mall-title">{{ mall.name }}({{ mall.id }})</div>
+  <section class="level-list">
+    <div *ngFor="let level of levels" class="level-list-item">
+      <app-level-card [level]="level" ></app-level-card>
+    </div>
+  </section>
+</div>

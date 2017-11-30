@@ -1,0 +1,21 @@
+.mall-title {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px;
+    color: #36475A;
+}
+
+.level-list {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, .1);
+}
+
+.level-list .level-list-item {
+    width: 100%;
+}
+
+.level-list .level-list-item:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+

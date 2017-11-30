@@ -1,0 +1,20 @@
+<div class="toilet-card">
+  <img class="toilet-img" src="/assets/images/default-img.jpg">
+  <div class="toilet-content">
+    <div class="toilet-name font-sub-header">
+      {{ toilet.name }}
+    </div>
+    <div class="toilet-desc font-normal">
+      <div class="gender-status">
+        <span class="gender-male">男厕:</span>
+        <span>总数: {{ toilet.position.male.total}}</span>
+        <span>可用: {{ toilet.position.male.available}}</span>
+      </div>
+      <div class="gender-status">
+        <span class="gender-female">女厕:</span>
+        <span>总数: {{ toilet.position.female.total}}</span>
+        <span>可用: {{ toilet.position.female.available}}</span>
+      </div>
+    </div>
+  </div>
+</div>

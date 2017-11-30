@@ -1,0 +1,25 @@
+.level-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    height: 40px;
+    border-radius: 2px;
+    /* box-shadow: 0px 1px 3px rgba(0, 0, 0, .08); */
+}
+
+.level-card:active {
+    background: rgba(0, 0, 0, .06);
+}
+
+.level-card > .level-card-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5E6C7B;
+}
+
+.level-card .icon-arrow-right {
+    width: 8px;
+    height: 16px;
+}

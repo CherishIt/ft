@@ -1,0 +1,8 @@
+.level-page .level-page-header {
+    font-size: 22px;
+    padding: 10px;
+}
+
+.toilet-list-item:not(:last-child) {
+    margin-bottom: 10px;
+}
