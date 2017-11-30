@@ -32,6 +32,9 @@ body {
   color: #5E6C7B;
 }
 
+.clickable:active {
+    background: rgba(0, 0, 0, .06);
+}
 
 
 /*!

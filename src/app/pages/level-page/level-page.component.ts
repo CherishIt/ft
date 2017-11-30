@@ -34,8 +34,8 @@ export class LevelPageComponent implements OnInit {
       );
   }
 
-  gotoMallPage() {
-    this.router.navigate([]);
+  backToMallPage() {
+    this.router.navigate(['/malls', this.mallId]);
   }
 
   ngOnInit() {
