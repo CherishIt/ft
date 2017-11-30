@@ -5,12 +5,24 @@
       {{ toilet.name }}
     </div>
     <div class="toilet-desc font-normal">
-      <div class="gender-status">
+      <div
+        class="gender-status"
+        [ngClass]="{
+          'positive': toilet.position.male.available > 0,
+          'negative': toilet.position.male.available === 0
+        }"
+      >
         <span class="gender-male">男厕:</span>
         <span>总数: {{ toilet.position.male.total}}</span>
         <span>可用: {{ toilet.position.male.available}}</span>
       </div>
-      <div class="gender-status">
+      <div
+        class="gender-status"
+        [ngClass]="{
+          'positive': toilet.position.female.available > 0,
+          'negative': toilet.position.female.available === 0
+        }"
+      >
         <span class="gender-female">女厕:</span>
         <span>总数: {{ toilet.position.female.total}}</span>
         <span>可用: {{ toilet.position.female.available}}</span>

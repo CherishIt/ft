@@ -1,0 +1,25 @@
+.toilet-modal {
+    width: 100%;
+}
+
+.toilet-modal .toilet-img {
+    height: 180px;
+    width: 100%;
+    background: url('/assets/images/default-img.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-position: center center; */
+}
+
+/* .toilet-modal .toilet-content {
+    padding: 10px;
+} */
+
+.toilet-content .toilet-name {
+    padding: 10px 5px 5px;
+    border-bottom: 1px solid #AFB5BD;
+}
+
+.toilet-content .toilet-status {
+    padding: 10px;
+}

@@ -1,16 +1,29 @@
 .level-page .level-header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
     width: 100%;
     background: white;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, .1);
 }
 
-.level-page .level-back-button {
+.level-page .level-content {
+    padding-top: 56px;
+}
+
+.level-page .level-header .level-back-button {
     display: inline-block;
-    margin: 8px;
+    margin: 10px 8px;
     padding: 5px 10px;
     /* box-shadow: 0px 1px 4px rgba(0, 0, 0, .1); */
     border: 1px solid #AFB5BD;
     border-radius: 3px;
+}
+
+.level-page .level-header .level-back-button img {
+    height: 14px;
+    transform: translateY(1px);
 }
 
 .level-page .level-page-header {
@@ -21,4 +34,29 @@
 
 .toilet-list-item:not(:last-child) {
     margin-bottom: 10px;
+}
+
+.level-page .level-find-buttons {
+    display: flex;
+    margin: 10px 0;
+}
+
+.level-page .level-find-buttons .find-button {
+    text-align: center;
+    /* align-items: center;
+    justify-content: center; */
+    flex: 1 0 0;
+    padding: 10px;
+    margin: 0 7px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, .3);
+    border-radius: 2px;
+}
+
+.level-page .level-find-buttons .find-button.male {
+    background: #6AA3F9;
+    color: white;
+}
+.level-page .level-find-buttons .find-button.female {
+    background: #F579B9;
+    color: white;
 }

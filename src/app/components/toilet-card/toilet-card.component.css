@@ -15,3 +15,12 @@
 .toilet-card .toilet-content {
     flex: 3 0 0;
 }
+
+.toilet-card .gender-status.positive {
+    color: #E95E3D;
+}
+
+.toilet-card .gender-status.negative {
+    /* color: red; */
+    opacity: 0.5;
+}
