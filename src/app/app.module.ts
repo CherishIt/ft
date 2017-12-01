@@ -66,6 +66,7 @@ const appRoutes: Routes = [
     // BaiduMapModule.forRoot({ak: 'KG5QWyNXednF6ylkZWNFqE9Y'}),
     NgxAmapModule.forRoot({
       apiKey: '645ebdcf0fd3e9e24a76b0df0b511530',
+      urlPath: 'https://webapi.amap.com/maps',
     })
     // MatListModule,
     // MatCardModule,
