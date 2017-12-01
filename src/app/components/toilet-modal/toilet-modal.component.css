@@ -17,9 +17,22 @@
 
 .toilet-content .toilet-name {
     padding: 10px 5px 5px;
-    border-bottom: 1px solid #AFB5BD;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
 .toilet-content .toilet-status {
     padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.toilet-content .toilet-map {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.toilet-content .toilet-map img {
+    width: 8px;
+    height: 12px;
 }

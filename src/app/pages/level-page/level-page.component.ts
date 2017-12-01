@@ -22,8 +22,8 @@ export class LevelPageComponent implements OnInit {
     private levelService: LevelService,
     public modalService: ModalService,
   ) {
-    this.mallId = route.snapshot.paramMap.get('mall_id');
-    this.levelId = route.snapshot.paramMap.get('level_id');
+    this.mallId = route.snapshot.paramMap.get('mallId');
+    this.levelId = route.snapshot.paramMap.get('levelId');
   }
 
   getToilets(): void {

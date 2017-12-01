@@ -1,2 +1,5 @@
-<baidu-map [options]="options">asdf</baidu-map>
-asdfasdfasd
+<ngx-amap [center]="center">
+  <amap-tool-bar></amap-tool-bar>
+  <amap-marker [position]="center"></amap-marker>
+</ngx-amap>
+<div class="map-back-button font-sub-header" (click)="backToList()">返回</div>

@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { BaiduMapModule } from 'angular2-baidu-map';
+import { NgxAmapModule } from 'ngx-amap';
 
 // import { MatListModule } from '@angular/material/list';
 // import { MatCardModule } from '@angular/material/card';
@@ -27,15 +28,15 @@ import { ModalService } from './services/modal.service';
 
 const appRoutes: Routes = [
   {
-    path: 'malls/:mall_id',
+    path: 'malls/:mallId',
     component: MallPageComponent,
   },
   {
-    path: 'malls/:mall_id/levels/:level_id',
+    path: 'malls/:mallId/levels/:levelId',
     component: LevelPageComponent,
   },
   {
-    path: 'malls/:mall_id/levels/:level_id/toilets/:toilet_id/map',
+    path: 'malls/:mallId/levels/:levelId/toilets/:toiletId/map',
     component: MapModalComponent,
   },
 ];
@@ -59,7 +60,10 @@ const appRoutes: Routes = [
       { useHash: true }
     ),
     HttpClientModule,
-    BaiduMapModule.forRoot({ak: 'KG5QWyNXednF6ylkZWNFqE9Y'}),
+    // BaiduMapModule.forRoot({ak: 'KG5QWyNXednF6ylkZWNFqE9Y'}),
+    NgxAmapModule.forRoot({
+      apiKey: '645ebdcf0fd3e9e24a76b0df0b511530',
+    })
     // MatListModule,
     // MatCardModule,
     // MatButtonModule,
