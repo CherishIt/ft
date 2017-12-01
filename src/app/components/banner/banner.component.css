@@ -1,0 +1,22 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #6AA3F9;
+    padding: 10px;
+}
+
+.banner.closed {
+    display: none;
+}
+
+.banner ng-content {
+    flex: 1 0 0;
+    font-size: 19px;
+    color: white;
+}
+
+.banner .close-button {
+    flex: 0 0 0;
+    color: white;
+}

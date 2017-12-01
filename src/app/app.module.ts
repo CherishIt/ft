@@ -21,6 +21,7 @@ import { ToiletCardComponent } from './components/toilet-card/toilet-card.compon
 import { ModalComponent } from './components/modal/modal.component';
 import { ToiletModalComponent } from './components/toilet-modal/toilet-modal.component';
 import { MapModalComponent } from './components/map-modal/map-modal.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 import { MallService } from './services/mall.service';
 import { LevelService } from './services/level.service';
@@ -51,6 +52,7 @@ const appRoutes: Routes = [
     ModalComponent,
     ToiletModalComponent,
     MapModalComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,

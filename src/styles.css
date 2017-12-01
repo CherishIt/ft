@@ -2,7 +2,8 @@ html {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: #282828;
+  /* background-color: #282828; */
+  background-color: #F2F4F8;
   font-size: 100px;
 }
 
@@ -11,7 +12,6 @@ body {
   width: 100%;
   font-size: 16px;
   font-family: 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
-  background-color: #F2F4F8;
   color: #556579;
 }
 
@@ -34,6 +34,18 @@ body {
 
 .clickable:active {
     background: rgba(0, 0, 0, .06);
+}
+
+app-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: rgba(255,255,255,.8);
+}
+
+app-banner .link {
+    color: #1976d2;
+    text-decoration: underline;
 }
 
 

@@ -1,4 +1,5 @@
-<div class="level-page">
+<div class="level-page page">
+
   <div class="level-header">
     <div class="level-page-header font-sub-header">楼层:{{ levelId }}</div>
     <div class="level-back-button clickable" (click)="backToMallPage()">
@@ -6,6 +7,7 @@
       返回楼层列表
     </div>
   </div>
+
   <div class="level-content">
     <div class="level-find-buttons">
       <div class="find-button male clickable" (click)="findAvailMaleToilet()">
@@ -25,6 +27,7 @@
       </div>
     </div>
   </div>
+
   <app-modal [modalId]="toiletModal">
     <app-toilet-modal
       *ngIf="selectedToilet"
@@ -32,7 +35,12 @@
       style="width: 100%;"
     ></app-toilet-modal>
   </app-modal>
+
   <app-modal [modalId]="noneAvailModal">
     Not Available
   </app-modal>
+
+  <app-banner>
+    <span>附近掌柜的店、雨树湾、红坊、春水阁等9家店有优惠活动哦 <span class="link">去看看</span></span>
+  </app-banner>
 </div>
