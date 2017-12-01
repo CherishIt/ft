@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LevelService } from '../../services/level.service';
 import { ModalService } from '../../services/modal.service';
@@ -8,7 +8,7 @@ import { ModalService } from '../../services/modal.service';
   templateUrl: './level-page.component.html',
   styleUrls: ['./level-page.component.css']
 })
-export class LevelPageComponent implements OnInit {
+export class LevelPageComponent implements OnInit, OnDestroy {
   mallId: any;
   levelId: any;
   levelInfo: any;
@@ -16,6 +16,7 @@ export class LevelPageComponent implements OnInit {
   selectedToilet: any;
   toiletModal = 'toiletModal';
   noneAvailModal = 'noneAvailModal';
+  intervalId: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -91,11 +92,20 @@ export class LevelPageComponent implements OnInit {
   }
 
   backToMallPage() {
+    clearInterval(this.intervalId);
     this.router.navigate(['/malls', this.mallId]);
   }
 
   ngOnInit() {
     this.getToilets();
+    this.intervalId = setInterval(() => {
+      console.log(+new Date);
+      this.getToilets();
+    }, 5000);
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.intervalId);
   }
 
 }
