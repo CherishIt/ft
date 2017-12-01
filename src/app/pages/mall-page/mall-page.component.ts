@@ -18,7 +18,7 @@ export class MallPageComponent implements OnInit {
   ) { }
 
   getLevels() {
-    this.mallService.getLevels(1)
+    this.mallService.getLevels(this.mallId)
       .subscribe(
         data => {
           this.levels = data;

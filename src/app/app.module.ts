@@ -41,6 +41,10 @@ const appRoutes: Routes = [
     path: 'malls/:mallId/levels/:levelId/toilets/:toiletId/map',
     component: MapModalComponent,
   },
+  {
+    path: '**',
+    redirectTo: 'malls/5a20f52a3d950a7a8732d024',
+  },
 ];
 
 @NgModule({
