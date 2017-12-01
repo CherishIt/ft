@@ -56,6 +56,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
+      { useHash: true }
     ),
     HttpClientModule,
     BaiduMapModule.forRoot({ak: 'KG5QWyNXednF6ylkZWNFqE9Y'}),

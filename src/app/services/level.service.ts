@@ -12,6 +12,6 @@ export class LevelService {
 
   getToilets(mallId, levelId): Observable<any> {
     return this.http
-      .get(`http://result.eolinker.com/PGuRcYIb00fcad5b64a582339306e462c32d196624966bf?uri=/malls/${mallId}/levels/${levelId}`);
+      .get(`https://result.eolinker.com/PGuRcYIb00fcad5b64a582339306e462c32d196624966bf?uri=/malls/${mallId}/levels/${levelId}`);
   }
 }
