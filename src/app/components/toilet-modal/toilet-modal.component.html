@@ -5,12 +5,14 @@
     <div class="toilet-name font-sub-header">{{ toilet.name }}</div>
     <div class="toilet-status">
       <div class="font-normal">
-        <span class="gender-male">男厕:</span>
+        <!-- <span class="gender-male">男厕:</span> -->
+        <img class="male-icon" src="/assets/icons/icon-male2.png">
         <span>总数: {{ toilet.position.male.total}}</span>
         <span>可用: {{ toilet.position.male.available}}</span>
       </div>
       <div class="font-normal">
-        <span class="gender-female">女厕:</span>
+        <!-- <span class="gender-female">女厕:</span> -->
+        <img class="female-icon" src="/assets/icons/icon-female.png">
         <span>总数: {{ toilet.position.female.total}}</span>
         <span>可用: {{ toilet.position.female.available}}</span>
       </div>

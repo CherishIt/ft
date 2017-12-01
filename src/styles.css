@@ -40,6 +40,19 @@ body {
     background: rgba(0, 0, 0, .06);
 }
 
+.female-icon {
+  width: 8px;
+  height: 12px;
+  margin-right: 3px;
+  transform: translateY(1px);
+}
+
+.male-icon {
+  width: 11px;
+  height: 11px;
+  transform: translateY(1px);
+}
+
 app-banner {
     position: fixed;
     bottom: 0;
