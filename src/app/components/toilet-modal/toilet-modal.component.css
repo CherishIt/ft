@@ -8,7 +8,6 @@
     background: url('/assets/images/default-img.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    /* background-position: center center; */
 }
 
 /* .toilet-modal .toilet-content {
@@ -16,12 +15,12 @@
 } */
 
 .toilet-content .toilet-name {
-    padding: 10px 5px 5px;
+    padding: 5px 15px;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
 .toilet-content .toilet-status {
-    padding: 10px;
+    padding: 10px 15px;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
@@ -29,7 +28,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .toilet-content .toilet-map img {
