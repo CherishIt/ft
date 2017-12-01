@@ -15,6 +15,7 @@ export class ToiletCardComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log(this.toilet);
     this.img = this.imageService.getRandomImage();
   }
 

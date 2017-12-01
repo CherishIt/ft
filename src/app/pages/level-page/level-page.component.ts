@@ -11,6 +11,7 @@ import { ModalService } from '../../services/modal.service';
 export class LevelPageComponent implements OnInit {
   mallId: any;
   levelId: any;
+  levelInfo: any;
   toilets: any[];
   selectedToilet: any;
   toiletModal = 'toiletModal';
@@ -30,10 +31,28 @@ export class LevelPageComponent implements OnInit {
     this.levelService.getToilets(this.mallId, this.levelId)
       .subscribe(
         data => {
-          this.toilets = data.sort((a, b) =>
-            (this.getMaleAvail(b) + this.getFemaleAvail(b)) -
-            (this.getMaleAvail(a) + this.getFemaleAvail(a)),
-          );
+          this.levelInfo = data;
+          console.log(data);
+          this.toilets = data.toilets
+            .map(t => {
+              const male = t.position.male;
+              const female = t.position.female;
+              male.total = male.closets.length;
+              female.total = male.closets.length;
+              male.available = male.closets.reduce((acc, curr) =>
+                acc + curr.available ? 1 : 0,
+                0,
+              );
+              female.available = male.closets.reduce((acc, curr) =>
+                acc + curr.available ? 1 : 0,
+                0,
+              );
+              return t;
+            })
+            .sort((a, b) =>
+              (this.getMaleAvail(b) + this.getFemaleAvail(b)) -
+              (this.getMaleAvail(a) + this.getFemaleAvail(a)),
+            );
         },
         err => console.log(err),
       );
@@ -47,11 +66,11 @@ export class LevelPageComponent implements OnInit {
     return toilet.position.female.available;
   }
 
-  findAvailMaleToilet(): void {
+  findAvailToilet(availFn): void {
     let result = null;
     let maxAvail = 0;
     for (const toilet of this.toilets) {
-      const currAvail = this.getMaleAvail(toilet);
+      const currAvail = availFn(toilet);
       if (currAvail > maxAvail) {
         maxAvail = currAvail;
         result = toilet;
@@ -65,24 +84,27 @@ export class LevelPageComponent implements OnInit {
     }
   }
 
-  findAvailFemaleToilet(): void {
-    let result = null;
-    let maxAvail = 0;
-    for (const toilet of this.toilets) {
-      const currAvail = this.getFemaleAvail(toilet);
-      if (currAvail > maxAvail) {
-        maxAvail = currAvail;
-        result = toilet;
-      }
-    }
+  // findAvailMaleToilet(): void {
+  // }
 
-    if (result) {
-      this.selectedToilet = result;
-      this.modalService.open(this.toiletModal);
-    } else {
-      this.modalService.open(this.noneAvailModal);
-    }
-  }
+  // findAvailFemaleToilet(): void {
+  //   let result = null;
+  //   let maxAvail = 0;
+  //   for (const toilet of this.toilets) {
+  //     const currAvail = this.getFemaleAvail(toilet);
+  //     if (currAvail > maxAvail) {
+  //       maxAvail = currAvail;
+  //       result = toilet;
+  //     }
+  //   }
+
+  //   if (result) {
+  //     this.selectedToilet = result;
+  //     this.modalService.open(this.toiletModal);
+  //   } else {
+  //     this.modalService.open(this.noneAvailModal);
+  //   }
+  // }
 
   selectToilet(toilet): void {
     this.selectedToilet = toilet;

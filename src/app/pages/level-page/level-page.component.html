@@ -10,10 +10,10 @@
 
   <div class="level-content">
     <div class="level-find-buttons">
-      <div class="find-button male clickable" (click)="findAvailMaleToilet()">
+      <div class="find-button male clickable" (click)="findAvailToilet(getMaleAvail)">
         快速找到空闲男厕
       </div>
-      <div class="find-button female clickable" (click)="findAvailFemaleToilet()">
+      <div class="find-button female clickable" (click)="findAvailToilet(getFemaleAvail)">
         快速找到空闲女厕
       </div>
     </div>
@@ -37,7 +37,7 @@
   </app-modal>
 
   <app-modal [modalId]="noneAvailModal">
-    Not Available
+    <div class="none-avail-text">不好意思，本层没有空余的坑位</div>
   </app-modal>
 
   <app-banner>

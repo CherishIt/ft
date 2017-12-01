@@ -20,7 +20,7 @@ export class LevelCardComponent implements OnInit {
   }
 
   handleClick(level) {
-    this.router.navigate(['levels', level.id], {
+    this.router.navigate(['levels', level.name], {
       relativeTo: this.route,
     });
   }
