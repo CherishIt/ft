@@ -27,9 +27,9 @@
   align-items: center;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -70%);
+  transform: translate(-50%, -60%);
   width: 80vw;
   z-index: 1100;
   transition: all .5s ease;
-  border-radius: 2px;
+  border-radius: 4px;
 }
