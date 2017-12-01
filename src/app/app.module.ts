@@ -4,12 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-import { BaiduMapModule } from 'angular2-baidu-map';
 import { NgxAmapModule } from 'ngx-amap';
-
-// import { MatListModule } from '@angular/material/list';
-// import { MatCardModule } from '@angular/material/card';
-// import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 
@@ -67,14 +62,10 @@ const appRoutes: Routes = [
       { useHash: true }
     ),
     HttpClientModule,
-    // BaiduMapModule.forRoot({ak: 'KG5QWyNXednF6ylkZWNFqE9Y'}),
     NgxAmapModule.forRoot({
       apiKey: '645ebdcf0fd3e9e24a76b0df0b511530',
       urlPath: 'https://webapi.amap.com/maps',
     })
-    // MatListModule,
-    // MatCardModule,
-    // MatButtonModule,
   ],
   providers: [
     MallService,

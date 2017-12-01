@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { MapOptions } from 'angular2-baidu-map';
 
 @Component({
   selector: 'app-map-modal',
@@ -9,7 +8,6 @@ import { MapOptions } from 'angular2-baidu-map';
 })
 export class MapModalComponent implements OnInit {
   @Input() toilet: any;
-  options: MapOptions;
   center: [121.506191, 31.245554];
   mallId: any;
   levelId: any;
