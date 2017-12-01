@@ -1,13 +1,14 @@
 .mall-header {
-    height: 120px;
-    background: url('/assets/images/default-img.jpg') no-repeat;
+    height: 150px;
+    background: url('https://picsum.photos/400/300') no-repeat;
+    background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .mall-title {
     font-size: 22px;
     font-weight: 600;
-    padding: 10px 15px;
+    padding: 15px 15px;
     color: white;
     flex: 1;
 }

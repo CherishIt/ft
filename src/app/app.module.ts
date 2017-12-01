@@ -26,6 +26,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { MallService } from './services/mall.service';
 import { LevelService } from './services/level.service';
 import { ModalService } from './services/modal.service';
+import { ImageService } from './services/image.service';
 
 const appRoutes: Routes = [
   {
@@ -74,6 +75,7 @@ const appRoutes: Routes = [
     MallService,
     LevelService,
     ModalService,
+    ImageService,
   ],
   bootstrap: [AppComponent]
 })
