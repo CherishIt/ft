@@ -32,9 +32,9 @@ export class MallPageComponent implements OnInit {
   ngOnInit() {
     this.mallId = this.route.snapshot.paramMap.get('mallId');
     this.mall = {
-      name: 'Xmall',
+      name: '凯利大厦',
       id: this.mallId,
-      description: 'This is a small small mall.',
+      description: '这是一个有很多层的大厦。',
     };
     this.getLevels();
   }
