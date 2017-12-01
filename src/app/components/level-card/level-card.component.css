@@ -13,13 +13,32 @@
     background: rgba(0, 0, 0, .06);
 }
 
-.level-card > .level-card-name {
+/* .level-card .level-text {
+
+} */
+
+.level-card .level-card-name {
     font-size: 14px;
     font-weight: 500;
     color: #5E6C7B;
+    padding-right: 5px;
+}
+
+.level-card .level-card-desc {
+    font-size: 14px;
+    /* font-weight: 00; */
+    color: #AFB5BD;
 }
 
 .level-card .icon-arrow-right {
     width: 8px;
     height: 16px;
+}
+
+.male-color {
+    color: #6AA3F9;
+}
+
+.female-color {
+    color: #F579B9;
 }

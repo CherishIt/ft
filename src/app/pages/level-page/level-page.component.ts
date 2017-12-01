@@ -43,7 +43,7 @@ export class LevelPageComponent implements OnInit {
                 acc + curr.available ? 1 : 0,
                 0,
               );
-              female.available = male.closets.reduce((acc, curr) =>
+              female.available = female.closets.reduce((acc, curr) =>
                 acc + curr.available ? 1 : 0,
                 0,
               );
@@ -83,28 +83,6 @@ export class LevelPageComponent implements OnInit {
       this.modalService.open(this.noneAvailModal);
     }
   }
-
-  // findAvailMaleToilet(): void {
-  // }
-
-  // findAvailFemaleToilet(): void {
-  //   let result = null;
-  //   let maxAvail = 0;
-  //   for (const toilet of this.toilets) {
-  //     const currAvail = this.getFemaleAvail(toilet);
-  //     if (currAvail > maxAvail) {
-  //       maxAvail = currAvail;
-  //       result = toilet;
-  //     }
-  //   }
-
-  //   if (result) {
-  //     this.selectedToilet = result;
-  //     this.modalService.open(this.toiletModal);
-  //   } else {
-  //     this.modalService.open(this.noneAvailModal);
-  //   }
-  // }
 
   selectToilet(toilet): void {
     this.selectedToilet = toilet;

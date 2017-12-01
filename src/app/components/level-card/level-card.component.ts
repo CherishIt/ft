@@ -8,6 +8,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LevelCardComponent implements OnInit {
   @Input() level: any;
+  total: any;
+  maleAvail: any;
+  femaleAvail: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -17,6 +20,24 @@ export class LevelCardComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.level);
+    this.total = this.level.toilets.length;
+    this.maleAvail = this.getAvail('male');
+    this.femaleAvail = this.getAvail('female');
+  }
+
+  getAvail(gender: 'male' | 'female') {
+    // return this.level.toilets.position[gender].closets.reduce((acc, curr) =>
+    //   acc + curr.available ? 1 : 0,
+    //   0,
+    // );
+    return this.level.toilets.reduce((acc, curr) =>
+      acc + curr.position[gender].closets.reduce((a, c) =>
+        a + c.available ? 1 : 0,
+        0,
+      ),
+      0,
+    );
   }
 
   handleClick(level) {

@@ -1,4 +1,12 @@
 <div class="level-card" (click)="handleClick(level)">
-  <div class="level-card-name">{{ level.name }}</div>
+  <div class="level-text">
+    <span class="level-card-name">楼层: {{ level.name }}</span>
+    <span class="level-card-desc">(共{{ total }}个厕所, 剩余位置
+      <span class="male-color">{{ maleAvail }}</span>
+      /
+      <span class="female-color">{{ femaleAvail }}</span>
+      )
+    </span>
+  </div>
   <img class="icon-arrow-right" src="/assets/icons/icon-arrow-right.png" >
 </div>
